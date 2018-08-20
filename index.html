@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration form on modal window</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">    
+		$(function() {
+		     if (!$.cookie('hideModal')) {
+			var delay_popup = 3000;
+			setTimeout("document.getElementById('login-modal').style.display='block'", delay_popup);
+		     }
+		     $.cookie('hideModal', true, {
+			expires: 7,
+			path: '/'
+		   });
+		});
+	</script>
+</head>
+<body>
+	<h1>and now...</h1>
+	<h1>you must log in</h1>
+	<div class="container">
+		<div id="login-modal" class="modal-background">
+			<div class="modal">
+				<div class="modal-header">
+					<button class="btn--close" onclick="document.getElementById('login-modal').style.display='none';" title="Close this annoying window">X</button>
+					<div class="modal-header__text">Log in to the Site</div>
+				</div>
+				<div class="modal__center-block">
+					<div class="modal__center-block__buttons">
+						<button type="button" class="btn btn-facebook">
+							<i class="fab fa-facebook-square"></i>
+							Log in with Facebook
+						</button>
+						<button type="button" class="btn btn-google">
+							<i class="fab fa-google-plus-g"></i>
+							Log in with Google +
+						</button>
+					</div>
+					<div class="modal__center-block__login">
+						<form action="#">
+			                <div class="form-field">
+			                    <label for="login">Login</label>
+			                    <input id="login" type="email" name="login"/>
+			                </div>
+			                <div class="form-field">
+			                    <label for="password">Password</label>
+			                    <input id="password" type="password" name="password"/>
+			                </div>
+			                <div class="form-field">
+			                    <label for="remember">
+			                        <input class="blue" type="checkbox" name="remember" id="remember"/>
+			                        <span>Remember me</span>
+			                    </label>
+			                </div>
+			                <div class="form-field">
+			                    <button type="button" class="btn-log">Log in</button>
+			                    <a href="#">Need help logging in?</a>
+			                </div>
+			            </form>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<p>Don't have an account yet? </p><a href="#">Sign in</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var delay_popup = 2000;
+		setTimeout("document.getElementById('login-modal').style.display='block'", delay_popup);
+	</script>
+</body>
+</html>
