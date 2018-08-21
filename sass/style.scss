@@ -130,8 +130,8 @@ body h1:last-of-type {
 
 .modal__center-block__buttons {
 	width: 50%;
+	margin-top: -150px;
 	box-sizing: border-box;
-	height: 249px;
 	padding-right: 40px;
 	border-right: 1px solid rgba(0, 0, 0, 0.149);
 }
@@ -139,7 +139,6 @@ body h1:last-of-type {
 .modal__center-block__login {
 	width: 50%;
 	box-sizing: border-box;
-	height: 249px;
 }
 
 input:not([type="checkbox"]) {
@@ -156,8 +155,8 @@ input:not([type="checkbox"]) {
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 18px;
-	padding-left: 60px;
-	margin-bottom: 21px;
+	/*padding-left: 60px;
+	margin-bottom: 21px;*/
 }
 
 .btn i {
